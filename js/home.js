@@ -198,5 +198,5 @@ const historyBtn = document
 const blogButton = document
   .getElementById("blog-btn")
   .addEventListener("click", function () {
-    window.location.href = "../blog.html";
+    window.location.href = "https://shbhuiyan.github.io/my-5th-assignment-in-ph/blog.html";
   });
