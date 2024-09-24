@@ -13,6 +13,7 @@ const donationBtn = document
       .classList.add("bg-white", "text-gray-500");
 
     classRemove("donation-section");
+    classAdd('history-list')
   });
 
 // Card-1 Button ********
@@ -23,6 +24,7 @@ const card1Btn = document
     const myDonationAmount = valueCollector("card-1-input");
     const myBalance = innerTextCollector("my-balance");
     const donationAmount = innerTextCollector("total-Donation-Amount-1");
+    const modal = document.getElementById('my_modal_1');
 
     // Error Condition ***
 
@@ -35,6 +37,7 @@ const card1Btn = document
       return;
     } else {
       classAdd("Amount-error-1");
+      modal.showModal();
     }
 
     const totalDonationAmount = myDonationAmount + donationAmount;
@@ -62,7 +65,7 @@ const card1Btn = document
     );
     div.innerHTML = `
             <p class="capitalize text-lg font-bold">${myDonationAmount} Taka is Donated for ${title1}</p>
-            <p class="bg-gray-100 p-1">${date}</p>
+            <p class="bg-gray-100 p-1"><span class="font-semibold text-lime-700">Donation Time : </span>${date}</p>
         `;
     document.getElementById("history-list").prepend(div);
   });
@@ -75,6 +78,7 @@ const card2btn = document
     const myDonationAmount = valueCollector("card-2-input");
     const myBalance = innerTextCollector("my-balance");
     const donationAmount = innerTextCollector("total-Donation-Amount-2");
+    const modal =document.getElementById('my_modal_2');
 
     // Error Condition ***
 
@@ -87,6 +91,7 @@ const card2btn = document
       return;
     } else {
       classAdd("Amount-error-2");
+      modal.showModal();
     }
 
     const totalDonationAmount = myDonationAmount + donationAmount;
@@ -114,7 +119,7 @@ const card2btn = document
     );
     div.innerHTML = `
             <p class="capitalize text-lg font-bold">${myDonationAmount} Taka is Donated for ${title2}</p>
-            <p class="bg-gray-100 p-1">${date}</p>
+            <p class="bg-gray-100 p-1"><span class="font-semibold text-lime-700">Donation Time : </span>${date}</p>
         `;
     document.getElementById("history-list").prepend(div);
   });
@@ -127,6 +132,7 @@ const card3btn = document
     const myDonationAmount = valueCollector("card-3-input");
     const myBalance = innerTextCollector("my-balance");
     const donationAmount = innerTextCollector("total-Donation-Amount-3");
+    const modal = document.getElementById("my_modal_3");
 
     // Error Condition ***
 
@@ -139,6 +145,7 @@ const card3btn = document
       return;
     } else {
       classAdd("Amount-error-3");
+      modal.showModal();
     }
 
     const totalDonationAmount = myDonationAmount + donationAmount;
@@ -165,8 +172,8 @@ const card3btn = document
       "mx-auto"
     );
     div.innerHTML = `
-            <p class="capitalize text-lg font-bold">${myDonationAmount} Taka is Donated for ${title3}</p>
-            <p class="bg-gray-100 p-1">${date}</p>
+            <p class="capitalize text-lg font-bold">${myDonationAmount} BDT is Donated for ${title3}</p>
+            <p class="bg-gray-100 p-1"><span class="font-semibold text-lime-700">Donation Time : </span>${date}</p>
         `;
     document.getElementById("history-list").prepend(div);
   });
@@ -186,4 +193,13 @@ const historyBtn = document
       .classList.add("bg-white", "text-gray-500");
 
     classAdd("donation-section");
+    classRemove('history-list')
   });
+
+
+
+// Blog Button *******
+
+const blogButton = document.getElementById('blog-btn').addEventListener('click',function(){
+  window.location.href ="../blog.html"
+})

@@ -5,17 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/donation.png" type="image/x-icon">
     <title>Donate Bangladesh</title>
+<!-- Google Font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+<!-- Install Font Awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/d5814a2fe7.js"
+      crossorigin="anonymous"
+    ></script>
 <!-- Install DaisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+<!-- tailwind customize cdn  -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#da373d",
+              },
+              fontFamily: {
+                myFont: "Lexend",
+              },
+            },
+          },
+        };
+      </script>
 </head>
-<body>
+<body class="w-11/12 container mx-auto relative font-myFont">
+
+    <header class="space-y-4 md:space-y-8 bg-transparent backdrop-blur-lg sticky top-0 z-50">
+        <nav
+        class="flex justify-between items-center bg-cyan-100 bg-opacity-40 gap-8 py-4 md:p-4"
+      >
+        <button id="home-btn" class="btn bg-lime-400 text-xl font-bold hover:bg-lime-300">
+          Home
+        </button>
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="capitalize text-lg md:text-2xl font-bold">
+            Donate Bangladesh
+          </h1>
+        </div>
+        <p class="max-md:hidden text-2xl font-bold text-gray-500">
+          <i class="text-amber-400 fa-solid fa-circle-dollar-to-slot"></i>
+          <span id="my-balance">10000</span> BDT
+        </p>
+        </nav>
+    </header>
 
     <main>
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
 
     </main>
     
     <script src="./js/utilities.js"></script>
-    <script src="./js/home.js"></script>
+    <script src="./js/blog.js"></script>
 </body>
 </html>

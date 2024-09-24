@@ -48,8 +48,8 @@
       <nav
         class="flex justify-between items-center bg-cyan-100 bg-opacity-40 gap-8 py-4 md:p-4"
       >
-        <button class="btn bg-lime-400 text-xl font-bold hover:bg-lime-300">
-          Blog
+        <button id="blog-btn" class="btn bg-lime-400 text-xl font-bold hover:bg-lime-300">
+          F.A.Q
         </button>
         <div class="flex items-center gap-4">
           <img src="assets/logo.png" alt="" />
@@ -136,6 +136,22 @@
           >
             Donate Now
           </button>
+          <dialog id="my_modal_1" class="modal">
+            <div class="modal-box p-2">
+              <h1 class="text-5xl pb-4 font-bold text-center">Congrats!</h1>
+              <div class="w-12 mx-auto">
+                <img class="w-full" src="assets/coin.png" alt="" />
+              </div>
+              <p class="py-4 text-center">You Have Donated for Humankind</p>
+              <h5 class="text-xl font-bold text-center">Successfully</h5>
+              <div class="modal-action justify-around mt-2">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">close confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
       </div>
 
@@ -185,6 +201,22 @@
           >
             Donate Now
           </button>
+          <dialog id="my_modal_2" class="modal">
+            <div class="modal-box p-2">
+              <h1 class="text-5xl pb-4 font-bold text-center">Congrats!</h1>
+              <div class="w-12 mx-auto">
+                <img class="w-full" src="assets/coin.png" alt="" />
+              </div>
+              <p class="py-4 text-center">You Have Donated for Humankind</p>
+              <h5 class="text-xl font-bold text-center">Successfully</h5>
+              <div class="modal-action justify-around mt-2">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">close confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
       </div>
 
@@ -234,19 +266,18 @@
           <button
             id="card-3-btn"
             class="btn w-full bg-lime-400 text-xl font-bold capitalize hover:bg-lime-300"
-            onclick="my_modal_1.showModal()"
           >
             Donate Now
           </button>
-          <dialog id="my_modal_1" class="modal">
-            <div class="modal-box">
-              <h1 class="text-5xl font-bold text-center">Congrats!</h1>
-              <div class="flex justify-center items-center p-4">
-                <img src="assets/coin.png" alt="" />
+          <dialog id="my_modal_3" class="modal">
+            <div class="modal-box p-2">
+              <h1 class="text-5xl pb-4 font-bold text-center">Congrats!</h1>
+              <div class="w-12 mx-auto">
+                <img class="w-full" src="assets/coin.png" alt="" />
               </div>
               <p class="py-4 text-center">You Have Donated for Humankind</p>
               <h5 class="text-xl font-bold text-center">Successfully</h5>
-              <div class="modal-action justify-around">
+              <div class="modal-action justify-around mt-2">
                 <form method="dialog">
                   <!-- if there is a button in form, it will close the modal -->
                   <button class="btn">close confirmation</button>
@@ -260,7 +291,7 @@
     <!-- cards section ends here  -->
 
     <!-- History section start here -->
-    <section id="history-list" class="space-y-4 my-8"></section>
+    <section id="history-list" class="space-y-4 my-8 hidden"></section>
     <!-- History section ends here -->
 
     <script src="./js/utilities.js"></script>
