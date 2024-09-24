@@ -48,6 +48,8 @@ const card1Btn = document
     const updateMyBalance = document.getElementById("my-balance");
     updateMyBalance.innerText = remainingBalance;
 
+    document.getElementById('responsive').innerText = remainingBalance;
+
     document.getElementById("card-1-input").value = "";
 
     const date = new Date();
@@ -102,6 +104,8 @@ const card2btn = document
     const updateMyBalance = document.getElementById("my-balance");
     updateMyBalance.innerText = remainingBalance;
 
+    document.getElementById('responsive').innerText = remainingBalance;
+
     document.getElementById("card-2-input").value = "";
 
     const date = new Date();
@@ -155,6 +159,8 @@ const card3btn = document
     updateTotalDonationAmount.innerText = totalDonationAmount;
     const updateMyBalance = document.getElementById("my-balance");
     updateMyBalance.innerText = remainingBalance;
+
+    document.getElementById('responsive').innerText = remainingBalance;
 
     document.getElementById("card-3-input").value = "";
 
